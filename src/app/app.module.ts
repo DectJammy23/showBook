@@ -1,25 +1,35 @@
-// import { BookService } from './book.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, enableProdMode } from '@angular/core';
 
-// import { FormsModule }   from '@angular/forms';
+import { FormsModule }   from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
-// import { AppRoutingModule } from './app-routing.module';
-// import { AppComponent } from './app.component';
 import {MatInputModule} from '@angular/material/input';
+import { BookComponent } from './book/book.component';
 import {BooksComponent} from './app.books/app.books.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import {MatCardModule} from '@angular/material/card';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatButtonModule} from '@angular/material/button';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 @NgModule({
   declarations: [
     // AppComponent,
-    BooksComponent
+    BookComponent,
+    BooksComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    // MatInputModule
-    // FormsModule,
+    MatInputModule,
+    MatCardModule,
+    MatFormFieldModule,
+    MatButtonModule,
+    //MatSliderModule
+    FormsModule,
+    ReactiveFormsModule,
+    MatExpansionModule
     // AppRoutingModule
   ],
    providers: [],

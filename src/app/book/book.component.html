@@ -1,0 +1,25 @@
+
+
+<mat-accordion class="bookCard">
+  <mat-expansion-panel hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title *ngIf="bookDetails">{{ bookDetails.title }}</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title *ngIf="bookDetails">{{ bookDetails.title }}</mat-card-title>
+          <mat-card-subtitle *ngIf="bookDetails">{{ bookDetails.subtitle }}</mat-card-subtitle>
+          <mat-card-subtitle *ngIf="bookDetails">By {{ bookDetails.author }}</mat-card-subtitle>
+        </mat-card-header>
+        <img *ngIf="bookDetails" mat-card-image src="{{bookDetails.img}}" alt="{{bookDetails.title}}">
+        <mat-card-content>
+          <p *ngIf="bookDetails">{{bookDetails.description}}
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <a *ngIf="bookDetails" mat-button href="{{bookDetails.website}}">
+            <button mat-raised-button color="primary">Buy</button></a>
+        </mat-card-actions>
+      </mat-card>
+  </mat-expansion-panel>
+</mat-accordion>

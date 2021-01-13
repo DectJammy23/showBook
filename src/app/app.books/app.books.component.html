@@ -1,1 +1,17 @@
-<p>app.books works!</p>
+<div id="container">
+
+<mat-card class="searchCard">
+    <form class="example-form" (ngSubmit)="onSubmit()">
+        <mat-form-field class="example-full-width">
+          <mat-label>Search Books</mat-label>
+          <input matInput placeholder="Search..." value="" [(ngModel)]="search" (keyup)="onSubmit()">
+        </mat-form-field>
+        </form>
+</mat-card>
+<div id="resultContainer">
+<div style="display: none" #resultContainer>
+</div>
+</div>
+
+
+</div>
